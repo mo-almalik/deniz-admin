@@ -1,0 +1,12 @@
+{
+  "common":{
+    "language": "Language"
+  },
+  "navbar": {
+    "home" : "Home",
+    "about": "About Us",
+    "services" : "Services",
+    "products" : "Products"
+
+  }
+}
