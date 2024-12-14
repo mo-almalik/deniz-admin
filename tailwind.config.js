@@ -7,6 +7,15 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      colors:{
+        primary: '#2E57A6',
+        secondary: '#2F7DF9',
+        success: '#095BDB',
+        light: '#f1f2f6',
+        dark: '#34495e',
+        // gray: '#7f8c8d',
+
+      },
       screens:{
         "xs":"480px",
         "sm":"640px",
@@ -19,6 +28,7 @@ export default {
   },
   plugins: [
     require('tailwindcss-rtl'),
+    require('tailwind-scrollbar'),
   ],
 
-}``
+}

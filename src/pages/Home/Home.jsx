@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div>Dashboard</div>
+    <div className='h-[1500px]'>Dashboard</div>
   )
 }
 

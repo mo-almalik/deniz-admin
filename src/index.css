@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,6 +11,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 html {
@@ -18,5 +19,32 @@ html {
 }
 
 html[lang="ar"] {
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Tajawal', sans-serif;
 }
+
+
+
+/* تخصيص لون شريط التمرير */
+.scrollbar-thumb {
+    background-color: #2E57A6; /* اللون الرئيسي */
+    border-radius: 8px;
+  }
+  
+  .scrollbar-track {
+    background-color: #f0f0f0; /* لون الخلفية */
+  }
+  
+  /* حجم شريط التمرير */
+  main::-webkit-scrollbar {
+    width: 10px; /* العرض الأفقي */
+  }
+  
+  main::-webkit-scrollbar-thumb {
+     @apply bg-gray-300;
+    border-radius: 10px;
+  }
+  
+  main::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+  }
+  

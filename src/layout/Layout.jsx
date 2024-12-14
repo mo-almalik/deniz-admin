@@ -1,18 +1,32 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from '../common/Header';
+import SideBar from '../common/SideBar';
 
 function Layout() {
-  return <>
-    <header>
-      <h1>My Admin Panel</h1>
-    </header>
-    <main>
-     <Outlet />
-    </main>
-    <footer>
-      &copy; 2023 My Admin Panel
-    </footer>
-  </>
+  return (
+    <>
+      <div className="flex flex-col ">
+
+        <div className="flex flex-1">
+          <div className="flex-none">
+            <SideBar />
+          </div>
+
+
+          <main className="flex-1  bg-gray-50 overflow-y-scroll p-4 h-screen dark:bg-[#1B2431] dark:text-white ">
+            <div className="flex-none mb-5">
+              <Header />
+            </div>
+            <Outlet />
+            
+          </main>
+
+        </div>
+       
+      </div>
+    </>
+  );
 }
 
-export default Layout
+export default Layout;
