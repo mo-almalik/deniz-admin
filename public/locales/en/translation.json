@@ -7,6 +7,36 @@
     "about": "About Us",
     "services" : "Services",
     "products" : "Products"
-
-  }
+  },
+  
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "settings": "Settings",
+    "orders": "Orders",
+    "products": "Products",
+    "services": "Services",
+    "shipping": "Shipping",
+    "messages": "Messages",
+    "add-product": "Add Product",
+    "all-products":"all products",
+    "our-partners": "Our Partners",
+    "board-of-directors": "Board of Directors",
+    "about-us": "About Us",
+    "add-service": "Add Service",
+    "add-order": "Add Order",
+    "add-user": "Add User",
+    "edit-user": "Edit User",
+    "delete-user": "Delete User",
+    "edit-product": "Edit Product",
+    "delete-product": "Delete Product",
+    "edit-service": "Edit Service",
+    "delete-service": "Delete Service",
+    "edit-order": "Edit Order",
+    "delete-order": "Delete Order",
+    "edit-settings": "Edit Settings",
+    "delete-settings": "Delete Settings",
+    "edit-contact": "Edit Contact Messages",
+    "delete-contact": "Delete Contact Messages",
+    "edit-profile": "Edit Profile",
+    "delete-profile": "Delete Profile"
 }

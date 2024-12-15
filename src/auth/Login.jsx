@@ -31,7 +31,10 @@ function Login() {
     <>
       <div className="flex flex-col items-center justify-center w-full h-[100vh] bg-gray-100">
         <div className="w-[80%] md:w-[60%] lg:w-[50%]">
-          <h3 className="text-3xl text-center font-bold">Login</h3>
+          <h3 className="text-3xl text-center font-bold">Welcome Back</h3>
+           <p>
+           Enter your email and password to sign in
+           </p>
           {/* <h5>  {isError && <span className="text-red-500 text-md"> {isError}</span>}</h5> */}
 
           <Form layout="vertical" onFinish={handleSubmit(onSubmit)}>

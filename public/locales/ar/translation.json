@@ -1,11 +1,50 @@
 {
   "common":{
-    "language": "اللغة"
+    "language": "اللغة",
+    "logout": "تسجيل الخروج",
+    "profile": "الملف الشخصي",
+    "change_password": "تغيير كلمة المرور",
+    "help": "مساعدة"
+
   },
   "navbar": {
     "home" : "الرئيسية",
     "about": "  من نحن",
     "services" : "الخدمات",
     "products" : "المنتجات"
-  }
+  },
+
+    "dashboard": "لوحة التحكم",
+    "users": "المستخدمين",
+    "settings": "الإعدادات",
+    "orders": "الطلبات",
+    "products": "المنتجات",
+    "services": "الخدمات",
+    "shipping": "الشحن",
+    "messages": "الرسائل  ",
+    "add-product": "أضافة منتج",
+    "all-products":"المنتجات",
+    "our-partners": "شركاؤنا",
+    "board-of-directors": "مجلس الإدارة",
+    "about-us": "من نحن",
+    "add-service": "أضافة خدمة",
+    "add-order": "أضافة طلب",
+    "add-user": "أضافة مستخدم",
+    "edit-user": "تعديل المستخدم",
+    "delete-user": "حذف المستخدم",
+    "edit-product": "تعديل المنتج",
+    "delete-product": "حذف المنتج",
+    "edit-service": "تعديل الخدمة",
+    "delete-service": "حذف الخدمة",
+    "edit-order": "تعديل الطلب",
+    "delete-order": "حذف الطلب",
+    "edit-settings": "تعديل الإعدادات",
+    "delete-settings": "حذف الإعدادات",
+    "edit-contact": "تعديل رسائل التواصل",
+    "delete-contact": "حذف رسائل التواصل",
+    "edit-profile": "تعديل الملف الشخصي",
+    "delete-profile": "حذف الملف الشخصي"
+
+
+  
 }

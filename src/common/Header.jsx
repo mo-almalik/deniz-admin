@@ -29,7 +29,7 @@ function Header() {
       <div className='flex justify-between items-center'>
         <div className='flex  gap-x-5 items-center'>
 
-          <button className='border border-gray-300 p-2 rounded-lg cursor-pointer' onClick={handleToggle} >
+          <button className='border border-gray-300 p-2 rounded-lg cursor-pointer ' onClick={handleToggle} >
             <LuMenu size={20} className='dark:text-white ' />
           </button>
         </div>
@@ -39,7 +39,7 @@ function Header() {
             <HiMoon className={"dark:text-white"} />
           </button>
           <button className='p-2 rounded-lg border border-gray-300  hover:bg-gray-100 dark:hover:bg-gray-400 '>
-            <HiLogout className='dark:text-white ' />
+            <HiLogout className='dark:text-white rtl:rotate-180' />
           </button>
 
         </div>
