@@ -48,3 +48,11 @@ html[lang="ar"] {
     background-color: #f0f0f0;
   }
   
+
+  /* common class */
+  .title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #212121;
+  }

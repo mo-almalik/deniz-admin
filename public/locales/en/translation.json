@@ -2,13 +2,6 @@
   "common":{
     "language": "Language"
   },
-  "navbar": {
-    "home" : "Home",
-    "about": "About Us",
-    "services" : "Services",
-    "products" : "Products"
-  },
-  
     "dashboard": "Dashboard",
     "users": "Users",
     "settings": "Settings",
@@ -38,5 +31,17 @@
     "edit-contact": "Edit Contact Messages",
     "delete-contact": "Delete Contact Messages",
     "edit-profile": "Edit Profile",
-    "delete-profile": "Delete Profile"
+    "delete-profile": "Delete Profile",
+
+    "total_order":" Total Order",
+    "total_shipping":" Total Shipping",
+    "total_products":" Total Products",
+    "total_users":" Total Users",
+
+    "count":{
+      "users": "users",
+      "products": "products",
+      "orders": "orders",
+      "shipping":"shipping"
+    }
 }

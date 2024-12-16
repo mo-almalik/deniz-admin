@@ -7,12 +7,7 @@
     "help": "مساعدة"
 
   },
-  "navbar": {
-    "home" : "الرئيسية",
-    "about": "  من نحن",
-    "services" : "الخدمات",
-    "products" : "المنتجات"
-  },
+
 
     "dashboard": "لوحة التحكم",
     "users": "المستخدمين",
@@ -43,8 +38,19 @@
     "edit-contact": "تعديل رسائل التواصل",
     "delete-contact": "حذف رسائل التواصل",
     "edit-profile": "تعديل الملف الشخصي",
-    "delete-profile": "حذف الملف الشخصي"
+    "delete-profile": "حذف الملف الشخصي",
 
-
+    
+  "total_order": "إجمالي الطلبات",
+  "total_shipping": "إجمالي الشحن",
+  "total_products": "إجمالي المنتجات",
+  "total_users": "إجمالي المستخدمين",
+  
+  "count":{
+    "users": "مستخدم",
+    "products": "منتج",
+    "orders": "طلب",
+    "shipping":"الشحن"
+  }
   
 }

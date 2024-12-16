@@ -6,6 +6,7 @@ import Routers from './routers/router';
 import { useSelector } from 'react-redux';
 import { darkAlgorithm, defaultAlgorithm } from "antd/lib/theme";
 import './i18n';
+import { HelmetProvider } from 'react-helmet-async';
 function App() {
   const { i18n } = useTranslation();
   const themeMode = useSelector((state) => state.theme.mode) || "light";
@@ -18,6 +19,7 @@ function App() {
   }, [i18n.language]);
 
   return <>
+   <HelmetProvider>
   <ConfigProvider
   theme={{
     algorithm: themeMode === "dark" ? darkAlgorithm : defaultAlgorithm,
@@ -32,6 +34,8 @@ function App() {
   >
   <RouterProvider router={Routers} />
   </ConfigProvider>
+   </HelmetProvider>
+
 
   </>
 }
