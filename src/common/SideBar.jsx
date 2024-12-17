@@ -21,17 +21,17 @@ function SideBar() {
     {
       id: 1,
       title: t("dashboard"),
-      path: "/admin",
+      path: "home",
       icon: <LuLayoutDashboard size={20}  />,
     },
     {
       id: 3,
       title: t("products"),
-      path: "/products",
+      path: "/product",
       icon: <LuPackage  size={20}  />,
       subItems: [
-        { id: 31, title: t("all-products"), path: "/products/all" },
-        { id: 32, title: t("add-product"), path: "/products/add" },
+        { id: 31, title: t("all-products"), path: "product/all-products" },
+        { id: 32, title: t("add-product"), path: "product/add-product" },
       ],
     },
     {
@@ -84,7 +84,7 @@ function SideBar() {
   return (
     <aside
       style={{ background: themeMode === "light" ? "#FFF" : "#273142" }}
-      className={`transition-all duration-500 drop-shadow-sm h-full ${
+      className={`capitalize transition-all duration-500 drop-shadow-sm h-full ${
         isOpen ? "w-64" : "w-0"
       } overflow-hidden`}
     >

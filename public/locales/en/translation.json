@@ -1,6 +1,16 @@
 {
   "common":{
-    "language": "Language"
+    "language": "Language",
+    "logout": "logout",
+    "profile": "profile  ",
+    "change_password": " change password    ",
+    "help": "help",
+    "delete": "delete",
+    "cancel": "cancel",
+    "save": "save",
+    "search": "search",
+    "add": "add",
+    "edit": "edit"
   },
     "dashboard": "Dashboard",
     "users": "Users",
@@ -43,5 +53,15 @@
       "products": "products",
       "orders": "orders",
       "shipping":"shipping"
+    },
+    "columns":{
+      "name": "name",
+      "price": "price",
+      "quantity": "quantity",
+      "status": "status",
+      "actions": "actions",
+      "image" : "image"
     }
+
+
 }

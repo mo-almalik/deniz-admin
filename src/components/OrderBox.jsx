@@ -2,7 +2,7 @@ import React from 'react'
 import { Avatar } from 'antd'
 import { LuArrowUpLeft } from "react-icons/lu";
 import productImage from "../assets/product2.jpg"
-import { Link, Links } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function OrderBox() {
   const products =[
     {id:1, name: 'فول سوداني', price: 100 ,image: productImage ,quantity:2},
@@ -20,7 +20,7 @@ function OrderBox() {
         size={50}
         shape="circle"
         alt="Product"
-        className='border-2 border-gray-200'
+        className='border-2 border-gray-200 '
        
       />
        <div >
@@ -33,13 +33,12 @@ function OrderBox() {
         </div>
 
         <p> ${product.price}</p>
-       <div  className='bg-light w-8 h-8 rounded-full flex justify-center items-center'>
+
       <Link to={'#'}> 
-      <LuArrowUpLeft />
-      </Link>
-
-
+       <div  className='bg-light w-8 h-8 rounded-full flex justify-center items-center hover:bg-slate-50'>
+      <LuArrowUpLeft  className='rotate-90 rtl:rotate-0 dark:text-gray-600'/>
        </div>
+      </Link>
       </div>
     ))}
     </div>

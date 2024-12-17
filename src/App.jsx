@@ -18,6 +18,9 @@ function App() {
     document.documentElement.dir = direction; 
   }, [i18n.language]);
 
+  const arabicFont = 'Tajawal, Arial, sans-serif';  
+  const englishFont = 'Poppins, Arial, sans-serif';  
+  const fontFamily = i18n.language === 'ar' ? arabicFont : englishFont;
   return <>
    <HelmetProvider>
   <ConfigProvider
@@ -28,7 +31,15 @@ function App() {
       colorText: colors.textColor,
        borderRadius: 2,
        colorBgBase: colors.backgroundColor,
+       fontFamily: fontFamily
        
+    },
+    components:{
+      Table:{
+        headerBg: colors.tableBg,
+        footerBg: colors.tableBg,
+        colorBgContainer: colors.tableBg, 
+      }
     }
   }}
   >

@@ -14,11 +14,13 @@ const initialState = {
       primary: '#2E57A6',
       backgroundColor: '#F5F6FA',
       textColor: '#000000',
+      tableBg : '#FFFFFF',
     },
     dark: {
       primary: '#273142',
       backgroundColor: '#1B2431',
       textColor: '#ffffff',
+      tableBg : '#34495E',
     },
   },
 };

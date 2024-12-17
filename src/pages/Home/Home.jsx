@@ -11,7 +11,7 @@ function Home() {
     </Helmet>
 
  
-      <h1 className='title'>{t('dashboard')}</h1>
+      <h1 className='title dark:text-white'>{t('dashboard')}</h1>
 
      <CountComponent />
      

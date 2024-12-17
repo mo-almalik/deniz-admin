@@ -13,12 +13,12 @@ function CountComponent() {
           <div className='grid grid-cols-1 md:grid-cols-2  gap-5 items-start '>
            
            {/* count side */}
-            <div className='flex flex-col gap-4 w-full'>
+            <div className='flex flex-col gap-4 w-full space-y-2'>
     
     
                 {/* order  and shipping*/}
-               <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5'>
-                 <div className='bg-white py-4 px-2 rounded-lg border border-gray-50 flex items-center gap-x-10 justify-start'>
+               <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 space-x-3'>
+                 <div className='bg-white dark:bg-dark py-4 px-2 rounded-lg border border-gray-50 dark:border-0 flex items-center gap-x-10 justify-start'>
                    {/* #FFD164 */}
                   <div className='bg-[#ffd06415] p-2 rounded-lg border-gray-50'>
                     <img src={productIcon} alt={'products'}  className='w-10'/>
@@ -33,7 +33,7 @@ function CountComponent() {
     
                  </div>
     
-                 <div className='bg-white py-4 px-2 rounded-lg border border-gray-50 flex items-center gap-x-10 justify-start'>
+                 <div className='bg-white dark:bg-dark dark:border-0  py-4 px-2 rounded-lg border border-gray-50 flex items-center gap-x-10 justify-start'>
                  {/* #33D8DD */}
                    <div className='bg-[#33D8DD15] p-2 rounded-lg border-gray-50'>
                    <img src={deliveryIcon} alt={'shipping'}  className='w-10'/>
@@ -49,8 +49,8 @@ function CountComponent() {
                </div>
     
                 {/* product and users */}
-                <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5'>
-                 <div className='bg-white py-4 px-2 rounded-lg border border-gray-50 flex items-center gap-x-10 justify-start'>
+                <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 space-x-3'>
+                 <div className='bg-white  dark:bg-dark dark:border-0 py-4 px-2 rounded-lg border border-gray-50 flex items-center gap-x-10 justify-start'>
                  {/* #01B763 */}
                  <div className='bg-[#01b76215] p-2 rounded-lg border-gray-50'>
                  <img src={orderIcon} alt={'orders'}  className='w-10'/>
@@ -66,7 +66,7 @@ function CountComponent() {
     
                 
     
-                  <div className='bg-white py-4 px-2 rounded-lg border border-gray-50 flex items-center gap-x-10 justify-start'>
+                  <div className='bg-white  dark:bg-dark dark:border-0 py-4 px-2 rounded-lg border border-gray-50 flex items-center gap-x-10 justify-start'>
                   {/* #095BDB */}
                   <div className='bg-[#095BDB15] p-2 rounded-lg border-gray-50'>
                 <img src={teamIcon} alt={'teams'}  className='w-10'/>
@@ -87,7 +87,7 @@ function CountComponent() {
             </div>
           
           {/* order  side */}
-            <div className='bg-white p-3 rounded-md w-full h-[200px]'>
+            <div className='bg-white dark:bg-dark p-3 rounded-md w-full h-[200px]'>
              <OrderBox />
             </div>
           </div>

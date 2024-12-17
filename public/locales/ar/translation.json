@@ -4,7 +4,13 @@
     "logout": "تسجيل الخروج",
     "profile": "الملف الشخصي",
     "change_password": "تغيير كلمة المرور",
-    "help": "مساعدة"
+    "help": "مساعدة",
+    "delete": "حذف",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "search": "بحث",
+    "add": "أضافة",
+    "edit": "تعديل"
 
   },
 
@@ -51,6 +57,14 @@
     "products": "منتج",
     "orders": "طلب",
     "shipping":"الشحن"
+  },
+
+  "columns":{
+    "name": "الاسم",
+    "price": "السعر",
+    "quantity": "الكمية",
+    "status": "الحالة",
+    "actions": "اجراء",
+    "image":"صورة المنتج"
   }
-  
 }
