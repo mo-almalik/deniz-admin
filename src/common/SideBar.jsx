@@ -37,19 +37,19 @@ function SideBar() {
     {
       id: 4,
       title: t("orders"),
-      path: "/orders",
+      path: "orders",
       icon: <LuLayoutList  size={20}  />,
     },
     {
       id: 5,
       title: t("services"),
-      path: "/services",
+      path: "services/all",
       icon: <LuTarget  size={20}  />,
     },
     {
       id: 6,
       title: t("shipping"),
-      path: "/shipping",
+      path: "shipping",
       icon: <TbCubeSend  size={22}  />,
     },
     {
@@ -57,33 +57,39 @@ function SideBar() {
       title: t("users"),
       icon: <LuUsers size={20}  />,
       subItems: [
-        { id: 21, title: t("all-users"), path: "/users/all" },
-        { id: 22, title: t("add-user"), path: "/users/add" },
+        { id: 21, title: t("all-users"), path: "user/all" },
+        { id: 22, title: t("add-user"), path: "user/add" },
       ],
     },
     {
       id: 7,
       title: t("messages"),
-      path: "/messages",
+      path: "messages",
       icon: <LuMail size={20}  />,
     },
     {
       id: 8,
       title: t("our-partners"),
-      path: "/our-partners",
+      path: "partners",
       icon: <LuHeartHandshake  size={20}  />,
     },
     {
       id: 9,
       title: t("settings"),
-      path: "/settings",
+      path: "settings",
+      icon: <LuSettings size={20}  />,
+    },
+    {
+      id: 10,
+      title: t("settings"),
+      path: "settings",
       icon: <LuSettings size={20}  />,
     },
   ];
 
   return (
     <aside
-      style={{ background: themeMode === "light" ? "#FFF" : "#273142" }}
+      style={{ background: themeMode === "light" ? "#FFF" : "#34495E" }}
       className={`capitalize transition-all duration-500 drop-shadow-sm h-full ${
         isOpen ? "w-64" : "w-0"
       } overflow-hidden`}

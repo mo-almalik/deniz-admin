@@ -28,6 +28,7 @@
     "add-service": "Add Service",
     "add-order": "Add Order",
     "add-user": "Add User",
+    "all-users":" All Users",
     "edit-user": "Edit User",
     "delete-user": "Delete User",
     "edit-product": "Edit Product",

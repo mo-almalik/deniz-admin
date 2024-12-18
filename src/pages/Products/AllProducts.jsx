@@ -5,6 +5,7 @@ import productImage from "../../assets/product2.jpg"
 import { Divider, Image, Popconfirm, Table } from 'antd'
 import { Link } from 'react-router-dom';
 import { HiOutlinePencilAlt, HiOutlineTrash } from "react-icons/hi";
+import { Helmet } from 'react-helmet-async';
 
 const { confirm } = Popconfirm;
 function AllProducts() {
@@ -72,7 +73,10 @@ function AllProducts() {
            quantity: el.quantity,
          }
        })
-  return (
+  return <>
+  <Helmet>
+    <title>{t('products')}</title>
+  </Helmet>
     <div>
         <h1 className='title'>{t('products')}</h1>
 
@@ -90,7 +94,7 @@ function AllProducts() {
         </div>
 
     </div>
-  )
+  </>
 }
 
 export default AllProducts

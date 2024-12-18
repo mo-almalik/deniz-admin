@@ -24,7 +24,7 @@ function Header() {
   }, [themeMode]);
   return <>
     <header
-      style={{ background: themeMode === "light" ? "#fff" : "#273142" }}
+      style={{ background: themeMode === "light" ? "#fff" : "#34495E" }}
       className='bg-white px-4 py-3 rounded-md '>
       <div className='flex justify-between items-center'>
         <div className='flex  gap-x-5 items-center'>

@@ -31,14 +31,17 @@ function App() {
       colorText: colors.textColor,
        borderRadius: 2,
        colorBgBase: colors.backgroundColor,
-       fontFamily: fontFamily
-       
+       fontFamily: fontFamily,
+
     },
     components:{
       Table:{
         headerBg: colors.tableBg,
         footerBg: colors.tableBg,
         colorBgContainer: colors.tableBg, 
+      },
+      Card:{
+        borderRadiusLG:12,
       }
     }
   }}
