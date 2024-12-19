@@ -12,7 +12,6 @@ function SideBar() {
 
   const [openSection, setOpenSection] = useState(null);
 
-  // وظيفة لفتح/إغلاق الأقسام
   const toggleSection = (key) => {
     setOpenSection((prevKey) => (prevKey === key ? null : key));
   };
