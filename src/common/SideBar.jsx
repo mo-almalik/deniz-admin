@@ -20,13 +20,13 @@ function SideBar() {
     {
       id: 1,
       title: t("dashboard"),
-      path: "home",
+      path: "/admin",
       icon: <LuLayoutDashboard size={20}  />,
     },
     {
       id: 3,
       title: t("products"),
-      path: "/product",
+      path: "/admin/product",
       icon: <LuPackage  size={20}  />,
       subItems: [
         { id: 31, title: t("all-products"), path: "product/all-products" },
@@ -78,12 +78,7 @@ function SideBar() {
       path: "settings",
       icon: <LuSettings size={20}  />,
     },
-    {
-      id: 10,
-      title: t("settings"),
-      path: "settings",
-      icon: <LuSettings size={20}  />,
-    },
+
   ];
 
   return (
@@ -104,8 +99,7 @@ function SideBar() {
           </h1>
         </div>
         <ul className="flex flex-col gap-y-4 dark:text-white text-md ">
-          {items.map((el) => (
-            <li key={el.id} className="flex flex-col gap-y-1 transition-all duration-600">
+          {items.map((el) => <li key={el.id} className="flex flex-col gap-y-1 transition-all duration-600">
               {el.subItems ? (
                 <>
                   <div
@@ -154,8 +148,7 @@ function SideBar() {
                   <span>{el.title}</span>
                 </NavLink>
               )}
-            </li>
-          ))}
+            </li>)}
         </ul>
       </div>
     </aside>

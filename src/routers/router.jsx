@@ -13,12 +13,13 @@ import AllUsers from "../pages/User/AllUsers";
 import Messages from "../pages/Messages/Messages";
 import ViewPartners from "../pages/Partner/ViewPartners";
 import Setting from "../pages/Setting/setting";
+import ProtectedRoute from "../utils/ProtectedRoute";
  
 
 const Routers = createBrowserRouter([
     {index:true, element:<Login />},
-    {path:'admin',element:<Layout /> , children:[
-     {path:'home', element:<Home />},
+    {path:'admin',element:<ProtectedRoute allowedRoles={['admin']}><Layout /></ProtectedRoute> , children:[
+     {index:true, element:<Home />},
      {path:'product/all-products',element:<AllProducts />},
      {path:'product/add-product',element:<AddProduct />},
      {path:"orders" ,element:<Order />},

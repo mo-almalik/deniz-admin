@@ -12,8 +12,6 @@ function Order() {
         clientName:"mohamad Ali" ,
         clientPhone:"0123456789",
         clientEmail:"mohamad@example.com",
-
-        
         },
        
             
@@ -35,7 +33,7 @@ function Order() {
         { title: 'البريد الإلكتروني', dataIndex: 'clientEmail', key: 'clientEmail',responsive: ['md'] },
        
       ]
-      const dataSource = products.map((product) => ({...product, total: product.price * product.quantity }))
+      const dataSource = products.map((product) => ({...product, total: product.price * product.quantity ,key : product.id}))
   return <>
 <div className='w-full '>
           

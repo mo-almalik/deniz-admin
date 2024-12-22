@@ -1,8 +1,12 @@
 import { Button, Form, Input } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {userLogin } from "../features/auth/authSlice";
 
 const schema = z.object({
   email: z
@@ -15,27 +19,43 @@ const schema = z.object({
     .nonempty("Password is required"),
 });
 function Login() {
-  const [passwordVisible, setPasswordVisible] = React.useState(false);
+  const {user ,role,isAuthenticated,isError,isLoading} = useSelector((state)=>state.auth)
+ 
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);
+  const navigate = useNavigate()
   const {
-    register,
     handleSubmit,
     setValue,
     formState: { errors },
   } = useForm({ resolver: zodResolver(schema) });
-
+ const dispath = useDispatch()
   const onSubmit = async (data) => {
-    console.log(data);
-  };
+    try{
+    const res= await dispath(userLogin(data));
+    if(res.payload?.data.userRole === "user"){
+       toast.error("this user can'not be authenticated")
+    }else{
+       toast.success(res?.payload?.message)
+       navigate('/admin')  
+    }
 
+  }catch(e){
+    return false
+  }
+
+  };
+ 
+
+  
+ 
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full h-[100vh] bg-gray-100">
         <div className="w-[80%] md:w-[60%] lg:w-[50%]">
-          <h3 className="text-3xl text-center font-bold">Welcome Back</h3>
-           <p>
-           Enter your email and password to sign in
-           </p>
-          {/* <h5>  {isError && <span className="text-red-500 text-md"> {isError}</span>}</h5> */}
+          <h3 className="text-3xl text-center font-bold" >Welcome Back</h3>
+
+          <h5>  {isError && <span className="text-red-500 text-md"> {isError}</span>}</h5>
 
           <Form layout="vertical" onFinish={handleSubmit(onSubmit)}>
             {/* Email Field */}
@@ -70,6 +90,7 @@ function Login() {
                 htmlType="submit"
                 className="p-3 w-full "
                 size="large"
+                loading={isLoading}
               >
                 Login
               </Button>
