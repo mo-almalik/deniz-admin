@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { LuChevronDown, LuChevronUp, LuHeartHandshake, LuLayoutDashboard, LuLayoutList, LuMail, LuPackage, LuSettings, LuTarget, LuUsers } from "react-icons/lu";
+import { LuChevronDown, LuChevronUp, LuHeartHandshake, LuInfo, LuLayoutDashboard, LuLayoutList, LuMail, LuPackage, LuSettings, LuStar, LuTarget, LuUsers } from "react-icons/lu";
 import { useSelector } from "react-redux";
 import { TbCubeSend } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
@@ -77,6 +77,18 @@ function SideBar() {
       title: t("settings"),
       path: "settings",
       icon: <LuSettings size={20}  />,
+    },
+    {
+      id:10,
+      title: t("about-us"),
+      path: "about-us",
+      icon: <LuInfo  size={20}  />,
+    },
+    {
+      id:11,
+      title: t("fields-work"),
+      path: "business",
+      icon: <LuStar  size={20}  />,
     },
 
   ];

@@ -10,7 +10,12 @@
     "save": "save",
     "search": "search",
     "add": "add",
-    "edit": "edit"
+    "edit": "edit",
+    "yes": "yes",
+    "no": "no",
+     "no-data":" Now data is available"
+   
+
   },
     "dashboard": "Dashboard",
     "users": "Users",
@@ -43,7 +48,9 @@
     "delete-contact": "Delete Contact Messages",
     "edit-profile": "Edit Profile",
     "delete-profile": "Delete Profile",
-
+    "fields-work":" Fields Of Work",
+    "add-fields-work":" Add Fields Work",
+    "add-partner": "Add Partner",
     "total_order":" Total Order",
     "total_shipping":" Total Shipping",
     "total_products":" Total Products",
@@ -62,7 +69,23 @@
       "status": "status",
       "actions": "actions",
       "image" : "image"
-    }
+    },
 
+    "msg":{
+    "success": "Operation completed successfully",
+    "error": "An error occurred during the operation",
+    "validationError": "There is an error in the entered data",
+    "notFound": "The requested item is not found",
+    "unauthorized": "You are not authorized to perform this action",
+    "forbidden": "You do not have permission to perform this action",
+    "serverError": "Server error occurred, please try again later",
+    "loading": "Loading...",
+
+    "deleteConfirm": "Are you sure you want to delete this item?",
+    "deleteSuccess": "Item deleted successfully",
+    "deleteError": "An error occurred while deleting the item",
+    "editSuccess": "Item updated successfully",
+    "editError": "An error occurred while updating the item"
+    }
 
 }

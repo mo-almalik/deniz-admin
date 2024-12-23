@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { checkAuth } from '../features/auth/authSlice';
+import Loading from '../components/Loading';
 
 const ProtectedRoute = ({ children, allowedRoles }) => {
 
@@ -9,7 +10,7 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
 
   
   if (isLoading || !isInitialized) {
-    return <div> login ... </div>; 
+    return <Loading />
   }
  
 

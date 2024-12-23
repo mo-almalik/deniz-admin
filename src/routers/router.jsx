@@ -14,6 +14,7 @@ import Messages from "../pages/Messages/Messages";
 import ViewPartners from "../pages/Partner/ViewPartners";
 import Setting from "../pages/Setting/setting";
 import ProtectedRoute from "../utils/ProtectedRoute";
+import AllBusiness from "../pages/Business/AllBusiness";
  
 
 const Routers = createBrowserRouter([
@@ -25,6 +26,7 @@ const Routers = createBrowserRouter([
      {path:"orders" ,element:<Order />},
      {path:"services/add",element:<AddServices />},
      {path:"services/all",element:<AllServices />},
+     {path:'business',element:<AllBusiness/>},
      {path:"shipping",element:<Shipping />},
      {path:"user/add",element:<AddUser />},
      {path:"user/all",element:<AllUsers />},

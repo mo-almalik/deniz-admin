@@ -9,6 +9,8 @@ import Routers from './routers/router';
 import './i18n';
 import { checkAuth } from './features/auth/authSlice';
 import Loading from './components/Loading';
+import { Bounce, Slide, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const { i18n } = useTranslation();
   const themeMode = useSelector((state) => state.theme.mode) || "light";
@@ -16,6 +18,7 @@ function App() {
   const arabicFont = 'Tajawal, Arial, sans-serif';
   const englishFont = 'Poppins, Arial, sans-serif';
   const fontFamily = i18n.language === 'ar' ? arabicFont : englishFont;
+  const toastDir = i18n.language === "ar" ? true : false;
 
   useEffect(() => {
     const direction = i18n.language === "ar" ? "rtl" : "ltr";
@@ -23,10 +26,9 @@ function App() {
     document.documentElement.dir = direction;
   }, [i18n.language]);
 
-  const { isLoading, isAuthenticated, role } = useSelector((state) => state.auth);
+  const { isLoading, isAuthenticated } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-
-
+ 
   useEffect(() => {
     if (!isAuthenticated) {
       dispatch(checkAuth())
@@ -64,6 +66,22 @@ function App() {
         }}
       >
         <RouterProvider router={Routers} />
+        <ToastContainer
+          position="top-center"
+          toastStyle={{
+            fontFamily: i18n.language === 'ar' ? arabicFont : englishFont
+          }}
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={toastDir}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        theme="light"
+        transition={Bounce}
+          />
       </ConfigProvider>
     </HelmetProvider>
 

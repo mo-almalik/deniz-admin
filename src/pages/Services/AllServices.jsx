@@ -1,13 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import serviceIcon from "../../assets/services.jpg"
-import { Button, Card, Image } from 'antd'
+import { Button, Card, Image, Modal } from 'antd'
 import { HiEye, HiOutlinePencilAlt, HiOutlineTrash } from 'react-icons/hi'
 import Meta from 'antd/es/card/Meta'
+import AddServices from './AddServices'
 function AllServices() {
     const { t } = useTranslation()
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
+    const showModal = () => {
+      setIsModalOpen(true);
+    };
+  
+    const handleOk = () => {
+      setIsModalOpen(false);
+    };
+  
+    const handleCancel = () => {
+      setIsModalOpen(false);
+    };
+    const editService = (id) => {
+        console.log("edit service", id);
+    }
+
+    const deleteService = (id) => {
+        console.log("delete service", id);
+    }
     const services =[
         {id:1, name: 'خدمات توزيع', image: serviceIcon  , description:" associated image for service"},
         {id:2, name: 'خدمات صيانة', image: serviceIcon , description:" associated image for service" },
@@ -20,7 +40,14 @@ function AllServices() {
     <title>{t('services')}</title>
   </Helmet>
 
+<div className='flex justify-between items-center my-5'>
 <h1 className='title'>{t('services')}</h1>
+
+{/* add service button */}
+<Button type='primary' onClick={showModal}>
+ {t('add-service')}
+</Button>
+</div>
 
 {/* service list */}
   <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
@@ -64,6 +91,16 @@ function AllServices() {
      </>)}
       
   </div>
+
+  <Modal 
+   title={t('add-service')}
+   open={isModalOpen}
+   onOk={handleOk}
+   onCancel={handleCancel}
+   footer={null}
+  >
+    <AddServices />
+  </Modal>
   </>
 }
 

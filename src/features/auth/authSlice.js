@@ -45,17 +45,32 @@ const initialState = {
 
   export const checkAuth = createAsyncThunk(
     "auth/checkAuth",
-    async (_,{ rejectWithValue }) => {
+    async (_, { rejectWithValue }) => {
       try {
-        const response = await authApi.get('/auth/check-auth-role');  
+       
+        const response = await authApi.get('/auth/check-auth-role');
         return response.data;
       } catch (error) {
+        if (error.response?.status === 403) {
+          try {
+            await authApi.put('/auth/refresh-token');
+            
+            // إعادة المحاولة بعد تحديث التوكن
+            const retryResponse = await authApi.get('/auth/check-auth-role');
+            return retryResponse.data;
+          } catch (refreshError) {
+            console.error("Failed to refresh token:", refreshError);
+            return rejectWithValue("Session expired. Please log in again.");
+          }
+        }
+  
+        // أي أخطاء أخرى
         const errorMessage = error.response?.data?.message || "Failed to log in";
         return rejectWithValue(errorMessage);
       }
     }
-  );
-
+  )
+  
  const authSlice = createSlice({
     name: 'auth',
     initialState,
