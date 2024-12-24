@@ -3,15 +3,16 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Image } from "antd";  
-import InputField from "../../components/InputField";
+import InputField from "../../components/Form/InputField";
 import { useCreateBusinessMutation } from "../../features/business/businessApi";
 import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
 import Button from "../../ui/Button"
+import FileInput from "../../components/Form/FileInput";
 
-function AddBusiness({ defaultValues = {} }) {
+function AddBusiness({onClose}) {
   const { t } = useTranslation();
-  const [createBusiness,{isLoading,data,isError,error}] =useCreateBusinessMutation()
+  const [createBusiness,{isLoading,isError,error}] =useCreateBusinessMutation()
   const [previewImage, setPreviewImage] = useState(null); 
   const schema = z.object({
     name: z.string().min(3).max(50),
@@ -25,7 +26,6 @@ function AddBusiness({ defaultValues = {} }) {
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
-    defaultValues,
   });
 
   const handleLogoChange = (e) => {
@@ -46,6 +46,7 @@ function AddBusiness({ defaultValues = {} }) {
     const response  = await createBusiness(formData)
     if(response?.data?.statusMessage === "success") {
       toast.success(t('msg.success'))
+      onClose()  
     }else if (response.error.data.statusMessage === "failed"){
       toast.error(t('msg.error'))
     }
@@ -75,25 +76,18 @@ function AddBusiness({ defaultValues = {} }) {
           type="textarea"
         />
 
-        <div style={{ marginBottom: "16px" }}>
+        <div >
           <label style={{ display: "block", marginBottom: "8px" }}>
             رفع ملف
           </label>
-          <input
+          <FileInput
             onChange={(e) => handleLogoChange(e)}
-            type="file"
-            style={{
-              border: errors.file ? "1px solid red" : "1px solid #ccc",
-              padding: "8px",
-              borderRadius: "4px",
-              width: "100%",
-            }}
+            name="logo"
+            accept="image/*"
+            placeholder="Upload Logo"
+            error={errors.logo}
           />
-          {errors.file && (
-            <span style={{ color: "red", fontSize: "12px" }}>
-              {errors.file.message}
-            </span>
-          )}
+
         </div>
 
        

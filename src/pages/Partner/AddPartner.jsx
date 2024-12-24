@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Image } from "antd";  
-import InputField from "../../components/InputField";
+import InputField from "../../components/Form/InputField";
 import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
 import Button from "../../ui/Button"
@@ -19,7 +19,7 @@ function AddPartner({ModalOpen}) {
   const [createPartner,{isLoading,data,isError,error}] = useCreatePartnerMutation()
   const [previewImage, setPreviewImage] = useState(null);
 
-     const { register, handleSubmit, formState: { errors } } = useForm({ resolver: zodResolver(schema) });
+     const { register, reset,handleSubmit, formState: { errors } } = useForm({ resolver: zodResolver(schema) });
     
      const handleLogoChange = (e) => {
         const file = e.target.files[0];
@@ -41,7 +41,9 @@ function AddPartner({ModalOpen}) {
     const response  = await createPartner(formData)
     if(response?.data?.statusMessage === "success") {
       toast.success(t('msg.success'))
-      ModalOpen(false)  // Close modal after successful creation
+      ModalOpen(false)  
+      reset();
+      setPreviewImage(null);  
     }else if (response.error.data.statusMessage === "failed"){
       toast.error(t('msg.error'))
     }

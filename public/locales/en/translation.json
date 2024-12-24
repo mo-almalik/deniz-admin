@@ -86,6 +86,59 @@
     "deleteError": "An error occurred while deleting the item",
     "editSuccess": "Item updated successfully",
     "editError": "An error occurred while updating the item"
-    }
+    } ,
+    "company": {
+    "companyName": "Company Name",
+    "description": "Company Description",
+    "mission": "Mission",
+    "vision": "Vision",
+    "values": "Values",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "socialMediaLinks": "Social Media Links",
+    "achievements": "Achievements",
+    "logo": "Logo"
+  },
+  "product": {
+    "name": "Product Name",
+    "description": "Product Description",
+    "price": "Price",
+    "category": "Category",
+    "stock": "Stock",
+    "businessUnits": "Business Units",
+    "metaTitle": "Meta Title",
+    "metaDescription": "Meta Description",
+    "image": "Product Image"
+  },
+  "order": {
+    "customerName": "Customer Name",
+    "customerEmail": "Customer Email",
+    "customerPhone": "Customer Phone",
+    "products": "Products",
+    "sampleStatus": "Sample Status"
+  },
+  "user": {
+    "name": "Name",
+    "description": "Description",
+    "price": "Price",
+    "image": "Image",
+    "businessUnits": "Business Units",
+    "userName": "User Name",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "role": "Role",
+    "actionBy": "Action By",
+    "action": "Action",
+    "collectionName": "Collection Name",
+    "item": "Item"
+  },
+  "client": {
+    "clientName": "Client Name",
+    "clientPosition": "Client Position",
+    "text": "Text",
+    "rate": "Rate",
+    "logo": "Logo"
+  }
 
 }

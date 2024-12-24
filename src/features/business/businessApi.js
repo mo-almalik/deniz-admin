@@ -48,8 +48,8 @@ export const businessSlice = createApi({
 
         // update business
         updateBusiness: builder.mutation({
-            query: (business) => ({
-                url: `/business-units/${business.id}`,
+            query: ({id,business}) => ({
+                url: `/business-units/${id}`,
                 method: "PUT",
                 body: business,
             }),

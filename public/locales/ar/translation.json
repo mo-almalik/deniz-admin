@@ -84,14 +84,64 @@
     "forbidden": "ليس لديك الصلاحية لتنفيذ هذا الإجراء",
     "serverError": "حدث خطأ في الخادم، حاول مرة أخرى لاحقاً",
     "loading": "جاري التحميل...",
-
     "deleteConfirm": "هل تريد حذف هذا العنصر؟",
     "deleteSuccess": "تم الحذف بنجاح",
     "deleteError": "حدث خطأ أثناء الحذف",
     "editSuccess": "تم التعديل بنجاح",
     "editError": "حدث خطأ أثناء التعديل"
-
-
-   
+  },
+  "company": {
+    "companyName": "اسم الشركة",
+    "description": "وصف الشركة",
+    "mission": "الرسالة",
+    "vision": "الرؤية",
+    "values": "القيم",
+    "phone": "الهاتف",
+    "whatsapp": "واتساب",
+    "socialMediaLinks": "روابط التواصل الاجتماعي",
+    "achievements": "الإنجازات",
+    "logo": "الشعار"
+  },
+  "product": {
+    "name": "اسم المنتج",
+    "description": "وصف المنتج",
+    "price": "السعر",
+    "category": "الفئة",
+    "stock": "المخزون",
+    "businessUnits": "وحدات الأعمال",
+    "metaTitle": "عنوان الميتا",
+    "metaDescription": "وصف الميتا",
+    "image": "صورة المنتج"
+  },
+  "order": {
+    "customerName": "اسم العميل",
+    "customerEmail": "بريد العميل الإلكتروني",
+    "customerPhone": "هاتف العميل",
+    "products": "المنتجات",
+    "sampleStatus": "حالة العينة"
+  },
+  "user": {
+    "name": "الاسم",
+    "description": "الوصف",
+    "price": "السعر",
+    "image": "الصورة",
+    "businessUnits": "وحدات الأعمال",
+    "userName": "اسم المستخدم",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "password": "كلمة المرور",
+    "role": "الدور",
+    "actionBy": "العمل بواسطة",
+    "action": "الإجراء",
+    "collectionName": "اسم المجموعة",
+    "item": "البند"
+  },
+  "client": {
+    "clientName": "اسم العميل",
+    "clientPosition": "وظيفة العميل",
+    "text": "النص",
+    "rate": "التقييم",
+    "logo": "الشعار"
   }
+
 }
